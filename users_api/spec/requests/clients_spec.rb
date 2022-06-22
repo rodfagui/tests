@@ -59,7 +59,7 @@ RSpec.describe 'Clients API' do
         end
       end
 
-      context 'when the user has the permission to list_users' do
+      context 'when the user has the permission to create_users' do
         before :each do
           role.permissions << createClientsPermission
           user.roles << role
