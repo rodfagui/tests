@@ -71,35 +71,5 @@ Permission.create(
   description: 'Permission to destroy users'
 ) unless Permission.find_by_action('destroy_users').present?
 
-Permission.create(
-  action: 'list_clients',
-  description: 'Permission to list clients'
-) unless Permission.find_by_action('list_clients').present?
-
-Permission.create(
-  action: 'create_clients',
-  description: 'Permission to create clients'
-) unless Permission.find_by_action('create_clients').present?
-
-Permission.create(
-  action: 'show_clients',
-  description: 'Permission to show clients'
-) unless Permission.find_by_action('show_clients').present?
-
-Permission.create(
-  action: 'update_clients',
-  description: 'Permission to update clients'
-) unless Permission.find_by_action('update_clients').present?
-
-Permission.create(
-  action: 'destroy_clients',
-  description: 'Permission to destroy users'
-) unless Permission.find_by_action('destroy_clients').present?
-
-Client.create(
-  name: 'Alberto Perez',
-  phone_number: '3045674321'
-) unless Client.find_by_phone_number('3045674321').present?
-
 set_roles_to_users(['admin'], ['rodfagui@gmail.com'])
 set_permissions_to_roles(Permission.all.pluck(:action), ['admin'])
