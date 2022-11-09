@@ -4,7 +4,7 @@ class ArraysNumbersController < ApplicationController
   def create
     new_array = ArrayServices.new(array_params[:num_of_elements]).create_shuffle_array
     new_array_number_instance = ArraysNumber.create(array: new_array.to_json)
-    render json: new_array_number_instance, status: :ok
+    render json: new_array_number_instance, status: :created
   end
 
   def show

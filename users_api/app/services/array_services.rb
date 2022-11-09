@@ -1,8 +1,8 @@
 class ArrayServices
   def initialize(num_of_elements, min=0, max=30)
-    @num_of_elements = num_of_elements
-    @min = min
-    @max = max
+    @num_of_elements = num_of_elements.to_i
+    @min = min.to_i
+    @max = max.to_i
   end
 
   def create_shuffle_array
